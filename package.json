@@ -6,7 +6,9 @@
   "bin": "bin/nogit.js",
   "scripts": {
     "coveralls": "easy-coveralls",
-    "test": "mocha"
+    "test": "mocha",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -28,7 +30,8 @@
     "ncp": "^2.0.0",
     "nodegit": "^0.14.1",
     "progress": "^1.1.8",
-    "rc": "^1.1.6"
+    "rc": "^1.1.6",
+    "snyk": "^1.189.0"
   },
   "devDependencies": {
     "chai": "^3.5.0",
@@ -42,5 +45,6 @@
     "sinon-chai": "^2.8.0",
     "tar-fs": "^1.13.2",
     "tmp": "0.0.28"
-  }
+  },
+  "snyk": true
 }
